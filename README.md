@@ -259,15 +259,21 @@ Gives you a `chart_recorder` executable. If it's too slow then you can
 build with `-O3` but since this is an application which writes to your
 terminal and may be going over SSH, I doubt this will be the problem.
 
-# Apologies
+# Related
+
+Every so often I think that a program like this will be a great idea. That
+tends not to be the case.
+
+    https://github.com/sjaturner/textscope
+    https://github.com/sjaturner/pbmbr
+
+# Apologies, Regrets
 
 The code is neither concise, nor stylish. Wrote this in C and in
 retrospect, I can't think why.
 
-# See also
-
-Every so often I think that a program like this will be a great idea. That
-tends not to be the case.
+In retrospect, not sure I like the `$` character as an indicator for the 
+end of line tag. Seem to get away with it though ...
 
 # Final thoughts
 
