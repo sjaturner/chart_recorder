@@ -8,19 +8,8 @@ tools like AWK to scale the data and apply thresholds, etc.
 
 A complicated example might look like this:
 
-    :; cat input | awk '{if($3 > 55) tailer="R3C"; else tailer="..."; printf("^%03d %d%s %d%s $%s *300\n",NR,$1*3,":A:10",$3*3,":B:15", tailer);fflush();}' | ./chart_recorder
-    004|                              ⠑⠒⠒⠢⠤⠤⢄⣀⣀⣀⣀                                  ⡇                                                                           |...
-    008|                                         ⠉⠉⠉⠒⠒⠒⠤⠤⠤⣀⣀⣀                      ⠑⢲                                                                          |...
-    012|                                                     ⠉⠑⠒⠒⠢⢤  A              ⠘⠤⡄                                                                        |...
-    016|                                                          ⢸                   ⢇⣀  B                                                                    |...
-    020|                                                 ⢀⣀⣀⡠⠤⠒⠒⠒⠉⠁                    ⢸                                                                       |...
-    024|                                    ⣀⣀⣀⣀⡠⠤⠤⠔⠒⠒⠊⠉⠉⠁     A                        ⠉⡇                                                                     |...
-    028|                      ⢀⣀⣀⡠⠤⠤⠔⠒⠒⠒⠒⠉⠉⠉                                             ⠑⢲                                                                    |...
-    032|         ⣀⣀⣀⠤⠤⠤⠒⠒⠒⠉⠉⠉⠉⠁                                                           ⠘⠤⡄ B                                                                |R3C
-    036|⣀⡠⠤⠤⠔⠒⠉⠉⠉     A                                                                     ⢇⣀                                                                 |R3C
-    040|⡇                                                                                    ⢸                                                                 |R3C
-    044|⠁⠐⠤⠤⠤⣀⡀                                                                               ⠉⡇                                                               |R3C
-    048|      ⠈⠉⠉⠑⠒⠒⠢⠤⠤⢄⣀⣀⡀ A                                                                  ⠑⢲  B                                                           |R3C
+![An example plot](./example.png)
+
 
 If you are streaming live data then that plot will simply scroll up,
 line by line as new data arrives.
@@ -84,6 +73,8 @@ There is a file called input in this directory, I'll use that throughout.
 As you can see, it's just columns of numbers.
 
 # The simplest case
+
+Please note, Github has messed up the braille layout a bit, TBH it's a lot to ask of Markdown!
 
 Print out the first column of numbers in Braille characters.
 
