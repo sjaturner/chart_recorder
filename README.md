@@ -8,6 +8,8 @@ tools like AWK to scale the data and apply thresholds, etc.
 
 A complicated example might look like this:
 
+    :; cat input | awk '{if($3 > 55) tailer="R3C"; else tailer="..."; printf("^%03d %d%s %d%s $%s *300\n",NR,$1*3,":A:10",$3*3,":B:15", tailer);fflush();}' | ./chart_recorder
+
 ![An example plot](./example.png)
 
 
